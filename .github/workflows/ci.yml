@@ -5,7 +5,16 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+  schedule:
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment"
+        type: choice
+        options: [dev,qa,uat]
+        default: qa
+        required: true
 jobs:
   test:
 
