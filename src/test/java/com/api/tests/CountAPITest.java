@@ -12,37 +12,37 @@ import static org.hamcrest.Matchers.notNullValue;
 
 import org.testng.annotations.Test;
 
-import com.api.utils.SpecUtil;
+import static com.api.utils.SpecUtil.*;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
+import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
 public class CountAPITest {
 	
-	@Test
+	@Test(description = "Verifying if count api is giving correct response",  groups =  {"api", "regression", "smoke"})
 	public void verifyCountAPIResponse() {
 		given()
-			.spec(SpecUtil.requestSpecWithAuth(FD))
+			.spec(requestSpecWithAuth(FD))
 		.when()
 			.get("/dashboard/count")
 		.then()
-			.spec(SpecUtil.responseSpec_OK())
+			.spec(responseSpec_OK())
 			.body("message", equalTo("Success"))
 			.body("data", notNullValue())
 			.body("data.size()", equalTo(3))
 			.body("data.count", everyItem(greaterThanOrEqualTo(0)))
 			.body("data.label", everyItem(not(blankOrNullString())))
 			.body("data.key", containsInAnyOrder("pending_for_delivery", "created_today", "pending_fst_assignment"))
-			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("response-schema/CountAPIResponseSchema-FD.json"));
+			.body(matchesJsonSchemaInClasspath("response-schema/CountAPIResponseSchema-FD.json"));
 	}
 	
-	@Test
+	@Test(description = "Verifying if count api is giving correct status code for invalid token",  groups =  {"api", "negative", "regression", "smoke"})
 	public void countAPITest_MissingAuthToken() {
 		given()
-			.spec(SpecUtil.requestSpec())
+			.spec(requestSpec())
 		.when()
 			.get("/dashboard/count")
 		.then()
-			.spec(SpecUtil.responseSpec_TEXT(401));
+			.spec(responseSpec_TEXT(401));
 	}
 	
 }
