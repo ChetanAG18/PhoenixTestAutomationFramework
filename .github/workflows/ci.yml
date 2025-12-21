@@ -43,8 +43,8 @@ jobs:
     - name: Default Values for Execution
       id: default
       run: |
-            echo "suiteXmlFile=${{ github.event.inputs.suiteXmlFile || 'testng.xml'}} >> $GITHUB_OUTPUT
-            echo "env=${{ github.event.inputs.env || 'qa' }} >> $GITHUB_OUTPUT
+            echo "suiteXmlFile=${{ github.event.inputs.suiteXmlFile || 'testng.xml' }}" >> $GITHUB_OUTPUT
+            echo "env=${{ github.event.inputs.env || 'qa' }}" >> $GITHUB_OUTPUT
         
     - name: Execute Test Automation Framework
       run: mvn clean test -DsuiteXmlFile="${{ steps.default.outputs.suiteXmlFile }}" -Denv="${{ steps.default.outputs.env }}"
