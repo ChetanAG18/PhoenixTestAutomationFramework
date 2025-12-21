@@ -18,7 +18,7 @@ on:
         default: qa
         required: true
 
-      DsuiteXmlFile:
+      suiteXmlFile:
        description: "TestNG Xml File"
        type: choice
        options: [testng.xml,smoke.xml,regression.xml]
@@ -43,7 +43,7 @@ jobs:
     - name: Default Values for Execution
       id: default
       run: |
-            echo "suiteXmlFile=${{ github.event.inputs.DsuiteXmlFile || 'testng.xml' }} >> $GITHUB_OUTPUT
+            echo "suiteXmlFile=${{ github.event.inputs.suiteXmlFile || 'testng.xml' }} >> $GITHUB_OUTPUT
             echo "env=${{ github.event.inputs.env || 'qa' }} >> $GITHUB_OUTPUT
         
     - name: Execute Test Automation Framework
