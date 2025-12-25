@@ -6,25 +6,25 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import com.opencsv.CSVReader;
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.CsvToBeanBuilder;
 import com.opencsv.exceptions.CsvException;
 
-public class ReadCSVFile {
+public class ReadCSVFile_MapToPOJO {
 
 	public static void main(String[] args) throws IOException, CsvException {
-		
-//		File csvFile = new File("C:\\Users\\Admin\\Desktop\\SDET with Jatin\\Java Module\\PhoenixTestAutomationFramework\\src\\main\\resources\\testData\\logincreds.csv");
-//		FileReader fileReader = new FileReader(csvFile);
-		
+			
 		InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("testData/logincreds.csv");
 		InputStreamReader isr = new InputStreamReader(is);
 		CSVReader csvReader = new CSVReader(isr);
 		
-		List<String []> dataList = csvReader.readAll();
+		CsvToBean<UserPOJO> csvToBean = new CsvToBeanBuilder(csvReader)
+				.withType(UserPOJO.class)
+				.withIgnoreEmptyLine(true)
+				.build();
 		
-		for(String [] data :dataList) {
-			System.out.println(data[0]);
-			System.out.println(data[1]);
-		}
+		List<UserPOJO> userList = csvToBean.parse();
+		System.out.println(userList);
 	}
 
 }
