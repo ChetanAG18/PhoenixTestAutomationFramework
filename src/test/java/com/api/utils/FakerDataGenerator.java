@@ -56,13 +56,18 @@ public class FakerDataGenerator {
 	}
 
 	private static List<Problems> generateFakeProblemsList() {
-		String fakeRemrk = faker.lorem().sentence(5);
-		int randomIndex = RANDOM.nextInt(validProblemsId.length);
-		Problems problems = new Problems(validProblemsId[randomIndex], fakeRemrk);
-
+		int count = RANDOM.nextInt(3) + 1;
+		String fakeRemrk;
+		int randomIndex;
+		Problems problems;
 		List<Problems> problemList = new ArrayList<Problems>();
-
-		problemList.add(problems);
+		
+		for (int i = 1; i <= count; i++) {
+			fakeRemrk = faker.lorem().sentence(5);
+			randomIndex = RANDOM.nextInt(validProblemsId.length);
+			problems = new Problems(validProblemsId[randomIndex], fakeRemrk);
+			problemList.add(problems);
+		}
 		return problemList;
 	}
 
