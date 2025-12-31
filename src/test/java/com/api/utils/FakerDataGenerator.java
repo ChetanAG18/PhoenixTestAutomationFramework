@@ -101,8 +101,8 @@ public class FakerDataGenerator {
 		String lastName = faker.name().lastName();
 		String mobileNumber = faker.numerify("70########");
 		String alternateMobileNumber = faker.numerify("70########");
-		String customerEmailAddress = faker.internet().emailAddress(firstName);
-		String altCustomerEmailAddress = faker.internet().emailAddress(firstName + lastName);
+		String customerEmailAddress = faker.internet().emailAddress();
+		String altCustomerEmailAddress = faker.internet().emailAddress();
 
 		Customer customer = new Customer(firstName, lastName, mobileNumber, alternateMobileNumber, customerEmailAddress,
 				altCustomerEmailAddress);
