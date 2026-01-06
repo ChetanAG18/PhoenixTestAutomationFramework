@@ -16,9 +16,9 @@ public class ExcelReaderUtil2 {
 		
 	}
 
-	public static <T> Iterator<T> loadTestData(String sheetName, Class<T> clazz){
+	public static <T> Iterator<T> loadTestData(String pathOfExcelFile, String sheetName, Class<T> clazz){
 		
-		InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("testData/PhoenixTestData.xlsx");
+		InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(pathOfExcelFile);
 		XSSFWorkbook myWorkBook = null;
 		try {
 			myWorkBook = new XSSFWorkbook(is);
