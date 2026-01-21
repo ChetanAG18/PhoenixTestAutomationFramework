@@ -1,24 +1,29 @@
 package com.database.dao;
 
+import static com.api.utils.DateTimeUtil.getTimeWithDaysAgo;
+
 import java.sql.SQLException;
 
 import org.testng.Assert;
 
+import com.api.constant.Model;
+import com.api.constant.Product;
 import com.api.request.model.Customer;
+import com.api.request.model.CustomerProduct;
+import com.database.model.CustomerAddressDBModel;
 import com.database.model.CustomerDBModel;
 
 public class DemoDoaRunner {
 
 	public static void main(String[] args) throws SQLException {
-		CustomerDBModel customerDBData = CustomerDao.getCustomerInfo();
-		System.out.println(customerDBData);
-		System.out.println(customerDBData.getFirst_name());
-		System.out.println(customerDBData.getLast_name());
-		System.out.println(customerDBData.getEmail_id());
+		//System.out.println(CustomerAddressDao.getCustomerAddressData(162303));
 		
-		Customer customer = new Customer("Chetan", "Geddappanavar", "7090191744", "", "agchetan18@gmail.com", "");
-		System.out.println(customer.first_name());
-		Assert.assertEquals(customerDBData.getFirst_name(), customer.first_name());
+		System.out.println(CustomerProductDao.getCustomerProductInfoFromDB(162875));
+		
+		CustomerProduct customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "78920576984787", "78920576984787", "78920576984787", getTimeWithDaysAgo(10),
+				Product.NEXUS_2.getCode(), Model.NEXUS_2_BLUE.getCode());
+		
+		System.out.println(customerProduct);
 	}
 
 }

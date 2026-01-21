@@ -87,7 +87,8 @@ public class FakerDataGenerator {
 		String streetName = faker.address().streetName();
 		String landmark = faker.address().streetName();
 		String area = faker.address().streetName();
-		String pinCode = faker.numerify("#####");
+		//String pinCode = faker.numerify("#####");
+		String pinCode = faker.number().numberBetween(10000, 99999) + "";  //to avoid leading zeros
 
 		String state = faker.address().state();
 

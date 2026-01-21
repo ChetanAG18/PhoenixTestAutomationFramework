@@ -56,6 +56,10 @@ public class CreateJobPayloadDataDao {
 			Limit 5;
 							""";
 	
+	private CreateJobPayloadDataDao() {
+		
+	}
+	
 	public static List<CreateJobBean> getCreateJobPayloadLoadData() {
 		Connection conn;
 		Statement statement;
