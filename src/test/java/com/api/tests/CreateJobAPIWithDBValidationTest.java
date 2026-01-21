@@ -27,9 +27,11 @@ import com.api.request.model.Problems;
 import com.database.dao.CustomerAddressDao;
 import com.database.dao.CustomerDao;
 import com.database.dao.CustomerProductDao;
+import com.database.dao.MapJobProblemDao;
 import com.database.model.CustomerAddressDBModel;
 import com.database.model.CustomerDBModel;
 import com.database.model.CustomerProductDBModel;
+import com.database.model.MapJobProblemModel;
 
 import io.restassured.response.Response;
 
@@ -49,7 +51,7 @@ public class CreateJobAPIWithDBValidationTest {
 	public void setUp() {
 		customer = new Customer("Chetan", "AG", "7090191744", "", "agchetan18@gmail.com", "");
 		customerAddress = new CustomerAddress("D 404", "Vasant Galaxy", "Bangaru nagar", "Inorbit", "Mumbai", "411039", "India", "Maharashtra");
-		customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "78920576984787", "78920576984787", "78920576984787", getTimeWithDaysAgo(10),
+		customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "78920578964787", "78920578964787", "78920578964787", getTimeWithDaysAgo(10),
 				Product.NEXUS_2.getCode(), Model.NEXUS_2_BLUE.getCode());
 		
 		Problems problems = new Problems(Problem.SMARTPHONE_IS_RUNNING_SLOW.getCode(), "Battery Issue");
@@ -98,9 +100,16 @@ public class CreateJobAPIWithDBValidationTest {
 		Assert.assertEquals(customerAddressDataFromDB.getCountry(), customerAddress.country());
 		Assert.assertEquals(customerAddressDataFromDB.getState(), customerAddress.state());
 		
-		int customerPeoductId = response.then().extract().jsonPath().getInt("data.tr_customer_product_id");
+		int tr_job_head_id = response.then().extract().jsonPath().getInt("data.id");
 		
-		CustomerProductDBModel customerProductDBData = CustomerProductDao.getCustomerProductInfoFromDB(customerPeoductId);
+		MapJobProblemModel jobDataFromDB = MapJobProblemDao.getProblemDetails(tr_job_head_id);
+		
+		Assert.assertEquals(jobDataFromDB.getMst_problem_id(), createJobPayload.problems().get(0).id());
+		Assert.assertEquals(jobDataFromDB.getRemark(), createJobPayload.problems().get(0).remark());
+		
+		int customerProductId = response.then().extract().jsonPath().getInt("data.tr_customer_product_id");
+		
+		CustomerProductDBModel customerProductDBData = CustomerProductDao.getCustomerProductInfoFromDB(customerProductId);
 		
 		Assert.assertEquals(customerProductDBData.getImei1(), customerProduct.imei1());
 		Assert.assertEquals(customerProductDBData.getImei2(), customerProduct.imei2());
