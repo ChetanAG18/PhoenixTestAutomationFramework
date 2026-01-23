@@ -11,7 +11,7 @@ import com.zaxxer.hikari.HikariDataSource;
 public class DatabaseManager {
 
 	private static final String DB_URL = EnvUtil.getValue("DB_URL");
-	private static final String DB_USER_NAME = EnvUtil.getValue("DB_USER_NAME");
+	private static final String DB_USER_NAME = EnvUtil.getValue("DB_USERNAME");
 	private static final String DB_PASSWORD = EnvUtil.getValue("DB_PASSWORD");
 	private static final int MAXIMUM_POOL_SIZE = Integer.parseInt(ConfigManager.getProperty("MAXIMUM_POOL_SIZE"));
 	private static final int MINIMUM_IDLE_COUNT = Integer.parseInt(ConfigManager.getProperty("MINIMUM_IDLE_COUNT"));
