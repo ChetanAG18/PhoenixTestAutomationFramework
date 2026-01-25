@@ -3,8 +3,6 @@ package com.api.services;
 import static com.api.utils.SpecUtil.requestSpec;
 import static io.restassured.RestAssured.given;
 
-import com.api.request.model.UserCredentials;
-
 import io.restassured.response.Response;
 
 public class AuthService {
