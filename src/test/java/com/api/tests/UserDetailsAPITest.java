@@ -16,7 +16,7 @@ public class UserDetailsAPITest {
 	
 	private UserService userService;
 	
-	@BeforeMethod(description = "Initializing User Service")
+	@BeforeMethod(description = "Instantiating the UserService object")
 	public void setup() {
 		userService = new UserService();
 	}

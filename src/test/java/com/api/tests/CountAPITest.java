@@ -24,7 +24,7 @@ public class CountAPITest {
 	
 	private DashboardService dashboardService;
 	
-	@BeforeMethod(description = "Initializing User Service")
+	@BeforeMethod(description = "Instantiating the DashboardService object")
 	public void setup() {
 		dashboardService = new DashboardService();
 	}

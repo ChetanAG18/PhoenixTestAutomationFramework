@@ -15,7 +15,7 @@ public class LoginAPITest {
 	private UserCredentials userCredentials;
 	private AuthService authService;
 	
-	@BeforeMethod(description = "Create the Payload for Login API")
+	@BeforeMethod(description = "Create the Payload for Login API and Instantiating the AuthService object")
 	public void setUp() {
 		userCredentials = new UserCredentials("iamfd", "password");
 		authService = new AuthService();
