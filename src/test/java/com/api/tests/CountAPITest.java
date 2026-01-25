@@ -1,7 +1,9 @@
 package com.api.tests;
 
 import static com.api.constant.Role.FD;
-import static io.restassured.RestAssured.given;
+import static com.api.utils.SpecUtil.responseSpec_OK;
+import static com.api.utils.SpecUtil.responseSpec_TEXT;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.blankOrNullString;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.equalTo;
@@ -10,21 +12,24 @@ import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static com.api.utils.SpecUtil.*;
-
-import static io.restassured.module.jsv.JsonSchemaValidator.*;
+import com.api.services.DashboardService;
 
 public class CountAPITest {
 	
+	private DashboardService dashboardService;
+	
+	@BeforeMethod(description = "Instantiating the DashboardService object")
+	public void setup() {
+		dashboardService = new DashboardService();
+	}
+	
 	@Test(description = "Verifying if count api is giving correct response",  groups =  {"api", "regression", "smoke"})
 	public void verifyCountAPIResponse() {
-		given()
-			.spec(requestSpecWithAuth(FD))
-		.when()
-			.get("/dashboard/count")
-		.then()
+			dashboardService.count(FD)
+		    .then()
 			.spec(responseSpec_OK())
 			.body("message", equalTo("Success"))
 			.body("data", notNullValue())
@@ -37,12 +42,9 @@ public class CountAPITest {
 	
 	@Test(description = "Verifying if count api is giving correct status code for invalid token",  groups =  {"api", "negative", "regression", "smoke"})
 	public void countAPITest_MissingAuthToken() {
-		given()
-			.spec(requestSpec())
-		.when()
-			.get("/dashboard/count")
+		 dashboardService.countWithNoAuth()
 		.then()
-			.spec(responseSpec_TEXT(401));
+		.spec(responseSpec_TEXT(401));
 	}
 	
 }
