@@ -10,7 +10,11 @@ import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import com.api.services.DashboardService;
+import com.api.services.UserService;
 
 import static com.api.utils.SpecUtil.*;
 
@@ -18,13 +22,17 @@ import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
 public class CountAPITest {
 	
+	private DashboardService dashboardService;
+	
+	@BeforeMethod(description = "Initializing User Service")
+	public void setup() {
+		dashboardService = new DashboardService();
+	}
+	
 	@Test(description = "Verifying if count api is giving correct response",  groups =  {"api", "regression", "smoke"})
 	public void verifyCountAPIResponse() {
-		given()
-			.spec(requestSpecWithAuth(FD))
-		.when()
-			.get("/dashboard/count")
-		.then()
+			dashboardService.count(FD)
+		    .then()
 			.spec(responseSpec_OK())
 			.body("message", equalTo("Success"))
 			.body("data", notNullValue())
@@ -37,12 +45,9 @@ public class CountAPITest {
 	
 	@Test(description = "Verifying if count api is giving correct status code for invalid token",  groups =  {"api", "negative", "regression", "smoke"})
 	public void countAPITest_MissingAuthToken() {
-		given()
-			.spec(requestSpec())
-		.when()
-			.get("/dashboard/count")
+		 dashboardService.countWithNoAuth()
 		.then()
-			.spec(responseSpec_TEXT(401));
+		.spec(responseSpec_TEXT(401));
 	}
 	
 }
