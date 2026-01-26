@@ -7,8 +7,8 @@ import static org.hamcrest.Matchers.equalTo;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.api.request.model.UserCredentials;
 import com.api.services.AuthService;
+import com.dataproviders.api.bean.UserBean;
 
 public class LoginAPIJSONDataDrivenTest {
 	
@@ -24,9 +24,9 @@ public class LoginAPIJSONDataDrivenTest {
 			dataProviderClass = com.dataproviders.DataProviderUtils.class,
 			dataProvider = "LoginAPIJsonDataProvider"
 			)
-	public void loginAPITest(UserCredentials userCredentials) {
+	public void loginAPITest(UserBean userBean) {
 		
-		authService.login(userCredentials)
+		authService.login(userBean)
 		.then()
 			.spec(responseSpec_OK())
 			.body("message", equalTo("Success"))
