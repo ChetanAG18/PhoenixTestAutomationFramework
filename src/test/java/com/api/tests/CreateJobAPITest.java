@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.constant.Model;
@@ -27,6 +28,7 @@ import com.api.request.model.CustomerProduct;
 import com.api.request.model.Problems;
 import com.api.services.JobService;
 
+@Listeners(com.listeners.APITestListeners.class)
 public class CreateJobAPITest {
 	
 	private CreateJobPayload createJobPayload;
@@ -36,7 +38,7 @@ public class CreateJobAPITest {
 	public void setUp() {
 		Customer customer = new Customer("Chetan", "AG", "7090191744", "", "agchetan18@gmail.com", "");
 		CustomerAddress customerAddress = new CustomerAddress("D 404", "Vasant Galaxy", "Bangaru nagar", "Inorbit", "Mumbai", "411039", "India", "Maharashtra");
-		CustomerProduct customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "19920302986569", "19920302986569", "19920302986569", getTimeWithDaysAgo(10),
+		CustomerProduct customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "19920302988473", "19920302988473", "19920302988473", getTimeWithDaysAgo(10),
 				Product.NEXUS_2.getCode(), Model.NEXUS_2_BLUE.getCode());
 		
 		Problems problems = new Problems(Problem.SMARTPHONE_IS_RUNNING_SLOW.getCode(), "Battery Issue");

@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.constant.Model;
@@ -40,6 +41,7 @@ import com.database.model.MapJobProblemModel;
 
 import io.restassured.response.Response;
 
+@Listeners(com.listeners.APITestListeners.class)
 public class CreateJobAPIWithDBValidationTest {
 	
 	private CreateJobPayload createJobPayload;
@@ -52,7 +54,7 @@ public class CreateJobAPIWithDBValidationTest {
 	public void setUp() {
 		customer = new Customer("Chetan", "AG", "7090191744", "", "agchetan18@gmail.com", "");
 		customerAddress = new CustomerAddress("D 404", "Vasant Galaxy", "Bangaru nagar", "Inorbit", "Mumbai", "411039", "India", "Maharashtra");
-		customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "78920578946845", "78920578946845", "78920578946845", getTimeWithDaysAgo(10),
+		customerProduct = new CustomerProduct(getTimeWithDaysAgo(10), "78920578946848", "78920578946848", "78920578946848", getTimeWithDaysAgo(10),
 				Product.NEXUS_2.getCode(), Model.NEXUS_2_BLUE.getCode());
 		
 		Problems problems = new Problems(Problem.SMARTPHONE_IS_RUNNING_SLOW.getCode(), "Battery Issue");

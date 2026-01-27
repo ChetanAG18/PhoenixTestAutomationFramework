@@ -8,6 +8,7 @@ import com.api.request.model.Search;
 import com.api.services.JobService;
 import static com.api.utils.SpecUtil.*;
 
+@Listeners(com.listeners.APITestListeners.class)
 public class SearchAPITest {
 	
 	private JobService jobService;

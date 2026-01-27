@@ -8,6 +8,7 @@ import com.api.request.model.Details;
 import com.api.services.DashboardService;
 import static com.api.utils.SpecUtil.*;
 
+@Listeners(com.listeners.APITestListeners.class)
 public class DetailsAPITest {
 	
 	private DashboardService dashboardService;
