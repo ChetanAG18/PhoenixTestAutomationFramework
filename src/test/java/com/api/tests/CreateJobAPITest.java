@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.constant.Model;
@@ -27,6 +28,7 @@ import com.api.request.model.CustomerProduct;
 import com.api.request.model.Problems;
 import com.api.services.JobService;
 
+@Listeners(com.listeners.APITestListeners.class)
 public class CreateJobAPITest {
 	
 	private CreateJobPayload createJobPayload;

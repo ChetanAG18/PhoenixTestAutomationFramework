@@ -24,7 +24,7 @@ public class APITestListeners implements ITestListener {
 		long startTime = result.getStartMillis();
 		long endTime = result.getEndMillis();
 		
-		LOGGER.info("Test Duration: {} ms", (endTime - startTime));
+		LOGGER.info("Total Duration: {} ms", (endTime - startTime));
 		LOGGER.info("{} - Test Passed", result.getName());
 	  }
 	
