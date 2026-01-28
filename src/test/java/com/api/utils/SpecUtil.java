@@ -7,7 +7,6 @@ import com.api.filters.SensitiveDataFilter;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -20,10 +19,7 @@ public class SpecUtil {
 		.setBaseUri(ConfigManager.getProperty("BASE_URI"))
 		.setContentType(ContentType.JSON)
 		.setAccept(ContentType.JSON)
-		.log(LogDetail.URI)
-		.log(LogDetail.METHOD)
-		.log(LogDetail.HEADERS)
-		.log(LogDetail.BODY)
+		.addFilter(new SensitiveDataFilter())
 		.build();
 		
 		return requestSpecification;
@@ -37,9 +33,6 @@ public class SpecUtil {
 		.setAccept(ContentType.JSON)
 		.setBody(payload)
 		.addFilter(new SensitiveDataFilter())
-		.log(LogDetail.URI)
-		.log(LogDetail.METHOD)
-		.log(LogDetail.HEADERS)
 		.build();
 		
 		return requestSpecification;
@@ -51,10 +44,7 @@ public class SpecUtil {
 				.setContentType(ContentType.JSON)
 				.setAccept(ContentType.JSON)
 				.addHeader("Authorization", AuthTokenProvider.getToken(role))
-				.log(LogDetail.URI)
-				.log(LogDetail.METHOD)
-				.log(LogDetail.HEADERS)
-				.log(LogDetail.BODY)
+				.addFilter(new SensitiveDataFilter())
 				.build();
 
 		return requestSpecification;
@@ -67,10 +57,7 @@ public class SpecUtil {
 				.setAccept(ContentType.JSON)
 				.addHeader("Authorization", AuthTokenProvider.getToken(role))
 				.setBody(paylaod)
-				.log(LogDetail.URI)
-				.log(LogDetail.METHOD)
-				.log(LogDetail.HEADERS)
-				.log(LogDetail.BODY)
+				.addFilter(new SensitiveDataFilter())
 				.build();
 
 		return requestSpecification;
