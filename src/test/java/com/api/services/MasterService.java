@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.api.constant.Role;
 
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 public class MasterService {
@@ -15,6 +16,7 @@ public class MasterService {
 	private static final String MASTER_ENDPOINT = "/master";
 	private static final Logger LOGGER = LogManager.getLogger(MasterService.class);
 	
+	@Step("Making Master API Request")
 	public Response master(Role role) {
 		LOGGER.info("Making request to {} with the role {}", MASTER_ENDPOINT, role);
 		return given()
@@ -23,6 +25,7 @@ public class MasterService {
 				.post(MASTER_ENDPOINT);  //default content-tpe application/url-formencoded
 	}
 	
+	@Step("Making Making API Request with no Auth token")
 	public Response masterWithNoAuth() {
 		LOGGER.info("Making request to {} with no Auth Token", MASTER_ENDPOINT);
 		return given()

@@ -8,6 +8,7 @@ import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Test;
 
 import com.api.request.model.CreateJobPayload;
 import com.api.request.model.Customer;
@@ -15,6 +16,8 @@ import com.api.request.model.CustomerAddress;
 import com.api.request.model.CustomerProduct;
 import com.api.request.model.Problems;
 import com.github.javafaker.Faker;
+
+import io.qameta.allure.Step;
 
 public class FakerDataGenerator {
 
@@ -36,6 +39,7 @@ public class FakerDataGenerator {
 
 	}
 
+	@Step("Generating the fake payload for Create Job API")
 	public static CreateJobPayload generateFakeCreateJobData() {
 		
 		LOGGER.info("Generating the fake payload for Create job");
@@ -48,6 +52,7 @@ public class FakerDataGenerator {
 		return payload;
 	}
 	
+	@Step("Generating multiple fake payload for Create Job API as per the specified count")
 	public static Iterator<CreateJobPayload> generateFakeCreateJobData(int count) {
 		LOGGER.info("Generating the fake {} payloads for Create job", count);
 		List<CreateJobPayload> payloadList = new ArrayList<CreateJobPayload>();
@@ -62,7 +67,8 @@ public class FakerDataGenerator {
 		}
 		return payloadList.iterator();
 	}
-
+	
+	@Step("Generating fake Problem list")
 	private static List<Problems> generateFakeProblemsList() {
 		int count = RANDOM.nextInt(3) + 1;
 		String fakeRemrk;
@@ -78,7 +84,8 @@ public class FakerDataGenerator {
 		}
 		return problemList;
 	}
-
+	
+	@Step("Generating fake Customer Product Information")
 	private static CustomerProduct generateFakeCustomerProduct() {
 		String dop = DateTimeUtil.getTimeWithDaysAgo(10);
 		String imeiSerialNumber = faker.numerify("###############");
@@ -88,7 +95,8 @@ public class FakerDataGenerator {
 				popUrl, PRODUCT_ID, MST_MODEL_ID);
 		return customerProduct;
 	}
-
+	
+	@Step("Generating fake Customer Address Information")
 	private static CustomerAddress generateFakeCustomerAddressData() {
 		String flatNumber = faker.numerify("###");
 		String apartmentName = faker.address().streetName();
@@ -104,7 +112,8 @@ public class FakerDataGenerator {
 				pinCode, COUNTRY, state);
 		return customerAddress;
 	}
-
+	
+	@Step("Generating fake Customer data") 
 	private static Customer generateFakeCustomerData() {
 		String firstName = faker.name().firstName();
 		String lastName = faker.name().lastName();
