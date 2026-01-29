@@ -5,6 +5,7 @@ import org.hamcrest.Matchers;
 import com.api.constant.Role;
 import com.api.filters.SensitiveDataFilter;
 
+import io.qameta.allure.Step;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -14,6 +15,7 @@ import io.restassured.specification.ResponseSpecification;
 public class SpecUtil {
 	
 	//GET - DEL
+	@Step("Setting up the BaseURI, Content Type as Application/JSON and attaching the SensitiveData Filter")
 	public static RequestSpecification requestSpec() {
 		RequestSpecification requestSpecification = new RequestSpecBuilder()
 		.setBaseUri(ConfigManager.getProperty("BASE_URI"))
@@ -26,6 +28,7 @@ public class SpecUtil {
 	}
 	
 	//POST-PUT-PATCH {BODY}
+	@Step("Setting up the BaseURI, Content Type as Application/JSON and attaching the SensitiveData Filter")
 	public static RequestSpecification requestSpec(Object payload) {
 		RequestSpecification requestSpecification = new RequestSpecBuilder()
 		.setBaseUri(ConfigManager.getProperty("BASE_URI"))
@@ -38,6 +41,7 @@ public class SpecUtil {
 		return requestSpecification;
 	}
 	
+	@Step("Setting up the BaseURI, Content Type as Application/JSON and attaching the SensitiveData Filter for a role")
 	public static RequestSpecification requestSpecWithAuth(Role role) {
 		RequestSpecification requestSpecification = new RequestSpecBuilder()
 				.setBaseUri(ConfigManager.getProperty("BASE_URI"))
@@ -50,6 +54,7 @@ public class SpecUtil {
 		return requestSpecification;
 	}
 	
+	@Step("Setting up the BaseURI, Content Type as Application/JSON and attaching the SensitiveData Filter for a role and attaching payload")
 	public static RequestSpecification requestSpecWithAuth(Role role, Object paylaod) {
 		RequestSpecification requestSpecification = new RequestSpecBuilder()
 				.setBaseUri(ConfigManager.getProperty("BASE_URI"))
@@ -63,7 +68,7 @@ public class SpecUtil {
 		return requestSpecification;
 	}
 	
-	
+	@Step("Expecting the response to have Content Type as Application/JSON, Status 200 and Response Time Less than 1000 ms")	
 	public static ResponseSpecification responseSpec_OK() {
 		ResponseSpecification responseSpecifiction = new ResponseSpecBuilder()
 		.expectContentType(ContentType.JSON)
@@ -74,7 +79,7 @@ public class SpecUtil {
 		return responseSpecifiction;
 	}
 	
-	
+	@Step("Expecting the response to have Content Type as Application/JSON and Response Time Less than 1000 ms and Status Code")	
 	public static ResponseSpecification responseSpec_JSON(int statusCode) {
 		ResponseSpecification responseSpecifiction = new ResponseSpecBuilder()
 		.expectContentType(ContentType.JSON)
@@ -84,7 +89,8 @@ public class SpecUtil {
 		
 		return responseSpecifiction;
 	}
-	
+
+	@Step("Expecting the response to have Content Type as Text and Response Time Less than 1000 ms and status code")
 	public static ResponseSpecification responseSpec_TEXT(int statusCode) {
 		ResponseSpecification responseSpecifiction = new ResponseSpecBuilder()
 		.expectStatusCode(statusCode)

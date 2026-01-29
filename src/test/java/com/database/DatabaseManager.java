@@ -12,6 +12,8 @@ import com.api.utils.VaultDBConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+import io.qameta.allure.Step;
+
 public class DatabaseManager {
 
 	private static final Logger LOGGER = LogManager.getLogger(DatabaseManager.class);
@@ -33,6 +35,7 @@ public class DatabaseManager {
 	private static final String DB_USER_NAME = loadSecret("DB_USERNAME");
 	private static final String DB_PASSWORD = loadSecret("DB_PASSWORD");
 	
+	@Step("Loading Database Secrets")
 	public static String loadSecret(String key) {
 		String value = null;
 		// Value will get its value from either Vault or Env
@@ -53,7 +56,8 @@ public class DatabaseManager {
 		value = EnvUtil.getValue(key);
 		return value;
 	}
-
+	
+	@Step("Initializing the Database Pool Connection")
 	private static void initializePool() {
 		if (hikariDataSource == null) { // First check which all the parallel threads will enter
 			LOGGER.warn("Database Connection is not available.... Creating HikariDataSource");
@@ -77,7 +81,8 @@ public class DatabaseManager {
 			}
 		}
 	}
-
+	
+	@Step("Getting the Database Connection")
 	public static Connection getConnection() throws SQLException {
 		Connection connection = null;
 
