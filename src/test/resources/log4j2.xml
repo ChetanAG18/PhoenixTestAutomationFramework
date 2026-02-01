@@ -1,11 +1,11 @@
 <Configuration>
 	<appenders>
 		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="%d{DD-MM-YYYY HH:mm:SS} [%t] %highlight{%5p} %c{1}::%M():%L - %m%n"></PatternLayout>
+			<PatternLayout pattern="%d{dd-MM-YYYY HH:mm:SS} [%t] %highlight{%5p} %c{1}::%M():%L - %m%n"></PatternLayout>
 		</Console>
 		
 		<File name="FileAppender" fileName="logs/application.log">
-			<PatternLayout pattern="%d{DD-MM-YYYY HH:mm:SS} [%t] %highlight{%5p} %c{1}::%M():%L - %m%n"></PatternLayout>
+			<PatternLayout pattern="%d{dd-MM-YYYY HH:mm:SS} [%t] %highlight{%5p} %c{1}::%M():%L - %m%n"></PatternLayout>
 		</File>
 
 	</appenders>
