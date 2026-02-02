@@ -15,7 +15,7 @@ import io.qameta.allure.Step;
 public class VaultDBConfig {
 
 	private static VaultConfig vaultConfig;
-	private static Vault vault;
+	private static Vault vault = null;
 	private static final Logger LOGGER = LogManager.getLogger(VaultDBConfig.class);
 
 	static {
