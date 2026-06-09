@@ -1,0 +1,106 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Gorakhnath&quot;,
+        &quot;last_name&quot;: &quot;Kapoor&quot;,
+        &quot;mobile_number&quot;: &quot;7030278933&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7089688239&quot;,
+        &quot;email_id&quot;: &quot;deeptimayee.marar@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;bandhu.varman@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;311&quot;,
+        &quot;apartment_name&quot;: &quot;Aatmaja Forges&quot;,
+        &quot;street_name&quot;: &quot;Abhaidev Canyon&quot;,
+        &quot;landmark&quot;: &quot;Iyengar Mount&quot;,
+        &quot;area&quot;: &quot;Trilokanath Spurs&quot;,
+        &quot;pincode&quot;: &quot;18376&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Andhra Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-05-30T19:33:44.835818158Z&quot;,
+        &quot;serial_number&quot;: &quot;093492260422632&quot;,
+        &quot;imei1&quot;: &quot;093492260422632&quot;,
+        &quot;imei2&quot;: &quot;093492260422632&quot;,
+        &quot;popurl&quot;: &quot;www.gopi-prajapat.co.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;remark&quot;: &quot;Possimus dicta aut eos inventore inventore provident laborum quo et.&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;remark&quot;: &quot;Nihil omnis fugiat et nihil accusamus eos.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODEwMzM2MTl9.9-EUu_IsJhL9tO_PpTgrXmEtlWxGbuuN5RmupAouEGU</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODEwMzM2MTl9.9-EUu_IsJhL9tO_PpTgrXmEtlWxGbuuN5RmupAouEGU&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Gorakhnath&quot;,
+        &quot;last_name&quot;: &quot;Kapoor&quot;,
+        &quot;mobile_number&quot;: &quot;7030278933&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7089688239&quot;,
+        &quot;email_id&quot;: &quot;deeptimayee.marar@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;bandhu.varman@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;311&quot;,
+        &quot;apartment_name&quot;: &quot;Aatmaja Forges&quot;,
+        &quot;street_name&quot;: &quot;Abhaidev Canyon&quot;,
+        &quot;landmark&quot;: &quot;Iyengar Mount&quot;,
+        &quot;area&quot;: &quot;Trilokanath Spurs&quot;,
+        &quot;pincode&quot;: &quot;18376&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Andhra Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-05-30T19:33:44.835818158Z&quot;,
+        &quot;serial_number&quot;: &quot;093492260422632&quot;,
+        &quot;imei1&quot;: &quot;093492260422632&quot;,
+        &quot;imei2&quot;: &quot;093492260422632&quot;,
+        &quot;popurl&quot;: &quot;www.gopi-prajapat.co.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;remark&quot;: &quot;Possimus dicta aut eos inventore inventore provident laborum quo et.&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;remark&quot;: &quot;Nihil omnis fugiat et nihil accusamus eos.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
