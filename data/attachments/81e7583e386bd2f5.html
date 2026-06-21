@@ -1,0 +1,114 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Dipankar&quot;,
+        &quot;last_name&quot;: &quot;Banerjee&quot;,
+        &quot;mobile_number&quot;: &quot;7027320874&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7087264945&quot;,
+        &quot;email_id&quot;: &quot;himadri.chattopadhyay@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;dhruv.pandey@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;901&quot;,
+        &quot;apartment_name&quot;: &quot;Tushar Junction&quot;,
+        &quot;street_name&quot;: &quot;Aayushman Prairie&quot;,
+        &quot;landmark&quot;: &quot;Tagore Freeway&quot;,
+        &quot;area&quot;: &quot;Joshi Ports&quot;,
+        &quot;pincode&quot;: &quot;75594&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Maharashtra&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-06-11T19:02:19.739540593Z&quot;,
+        &quot;serial_number&quot;: &quot;070140173325845&quot;,
+        &quot;imei1&quot;: &quot;070140173325845&quot;,
+        &quot;imei2&quot;: &quot;070140173325845&quot;,
+        &quot;popurl&quot;: &quot;www.daevika-tagore.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 27,
+            &quot;remark&quot;: &quot;Eius neque dolor quia facere officia harum sunt.&quot;
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Facere dolorem rerum quia officiis eum qui maxime molestias.&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;remark&quot;: &quot;Veniam consequuntur est quas blanditiis et corrupti laboriosam.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODIwNjg1MzR9.imedk4PDPIWXN1gpun6CmR1C_ujX030LvjA6-l36yxs</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODIwNjg1MzR9.imedk4PDPIWXN1gpun6CmR1C_ujX030LvjA6-l36yxs&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Dipankar&quot;,
+        &quot;last_name&quot;: &quot;Banerjee&quot;,
+        &quot;mobile_number&quot;: &quot;7027320874&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7087264945&quot;,
+        &quot;email_id&quot;: &quot;himadri.chattopadhyay@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;dhruv.pandey@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;901&quot;,
+        &quot;apartment_name&quot;: &quot;Tushar Junction&quot;,
+        &quot;street_name&quot;: &quot;Aayushman Prairie&quot;,
+        &quot;landmark&quot;: &quot;Tagore Freeway&quot;,
+        &quot;area&quot;: &quot;Joshi Ports&quot;,
+        &quot;pincode&quot;: &quot;75594&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Maharashtra&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-06-11T19:02:19.739540593Z&quot;,
+        &quot;serial_number&quot;: &quot;070140173325845&quot;,
+        &quot;imei1&quot;: &quot;070140173325845&quot;,
+        &quot;imei2&quot;: &quot;070140173325845&quot;,
+        &quot;popurl&quot;: &quot;www.daevika-tagore.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 27,
+            &quot;remark&quot;: &quot;Eius neque dolor quia facere officia harum sunt.&quot;
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Facere dolorem rerum quia officiis eum qui maxime molestias.&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;remark&quot;: &quot;Veniam consequuntur est quas blanditiis et corrupti laboriosam.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
