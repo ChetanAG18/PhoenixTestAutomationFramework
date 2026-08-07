@@ -1,0 +1,106 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Bhaanumati&quot;,
+        &quot;last_name&quot;: &quot;Kaul&quot;,
+        &quot;mobile_number&quot;: &quot;7087742422&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7030685606&quot;,
+        &quot;email_id&quot;: &quot;daevika.naik@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;vidya.mehra@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;108&quot;,
+        &quot;apartment_name&quot;: &quot;Dhyaneshwar Pass&quot;,
+        &quot;street_name&quot;: &quot;Dwivedi Mill&quot;,
+        &quot;landmark&quot;: &quot;Ekaparnika Cliffs&quot;,
+        &quot;area&quot;: &quot;Jyotis Estate&quot;,
+        &quot;pincode&quot;: &quot;39097&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Jharkhand&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-07-28T00:25:17.366421456Z&quot;,
+        &quot;serial_number&quot;: &quot;410188882757061&quot;,
+        &quot;imei1&quot;: &quot;410188882757061&quot;,
+        &quot;imei2&quot;: &quot;410188882757061&quot;,
+        &quot;popurl&quot;: &quot;www.aditeya-deshpande.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 19,
+            &quot;remark&quot;: &quot;Odit dolorum ut reprehenderit harum suscipit.&quot;
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;remark&quot;: &quot;Iure enim incidunt enim voluptates a sunt.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODYwNjIzMTN9.u6VuP-FssnQcinHYxEq0y7u6EWn_kLCvtvQuth5bOEs</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODYwNjIzMTN9.u6VuP-FssnQcinHYxEq0y7u6EWn_kLCvtvQuth5bOEs&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Bhaanumati&quot;,
+        &quot;last_name&quot;: &quot;Kaul&quot;,
+        &quot;mobile_number&quot;: &quot;7087742422&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7030685606&quot;,
+        &quot;email_id&quot;: &quot;daevika.naik@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;vidya.mehra@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;108&quot;,
+        &quot;apartment_name&quot;: &quot;Dhyaneshwar Pass&quot;,
+        &quot;street_name&quot;: &quot;Dwivedi Mill&quot;,
+        &quot;landmark&quot;: &quot;Ekaparnika Cliffs&quot;,
+        &quot;area&quot;: &quot;Jyotis Estate&quot;,
+        &quot;pincode&quot;: &quot;39097&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Jharkhand&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-07-28T00:25:17.366421456Z&quot;,
+        &quot;serial_number&quot;: &quot;410188882757061&quot;,
+        &quot;imei1&quot;: &quot;410188882757061&quot;,
+        &quot;imei2&quot;: &quot;410188882757061&quot;,
+        &quot;popurl&quot;: &quot;www.aditeya-deshpande.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 19,
+            &quot;remark&quot;: &quot;Odit dolorum ut reprehenderit harum suscipit.&quot;
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;remark&quot;: &quot;Iure enim incidunt enim voluptates a sunt.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
