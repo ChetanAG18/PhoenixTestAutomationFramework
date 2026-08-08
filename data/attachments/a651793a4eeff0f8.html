@@ -1,0 +1,114 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Urmila&quot;,
+        &quot;last_name&quot;: &quot;Saini&quot;,
+        &quot;mobile_number&quot;: &quot;7092571443&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7048822098&quot;,
+        &quot;email_id&quot;: &quot;chakradhar.gandhi@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;kamla.chopra@yahoo.co.in&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;096&quot;,
+        &quot;apartment_name&quot;: &quot;Iyer Lodge&quot;,
+        &quot;street_name&quot;: &quot;Achari Locks&quot;,
+        &quot;landmark&quot;: &quot;Anang Port&quot;,
+        &quot;area&quot;: &quot;Bhavani Ville&quot;,
+        &quot;pincode&quot;: &quot;90849&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Himachal Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-07-29T17:58:05.584902923Z&quot;,
+        &quot;serial_number&quot;: &quot;175526326518754&quot;,
+        &quot;imei1&quot;: &quot;175526326518754&quot;,
+        &quot;imei2&quot;: &quot;175526326518754&quot;,
+        &quot;popurl&quot;: &quot;www.satish-mahajan.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 20,
+            &quot;remark&quot;: &quot;Ut et corporis quia sequi optio sunt.&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;remark&quot;: &quot;Nesciunt consectetur esse in fuga recusandae et non ipsam.&quot;
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Ut ad est harum quia veniam.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODYyMTE4ODB9.9zAKlpqc4XJOVrES5FSv7-Ul4uYSACufyFSkC7jn950</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODYyMTE4ODB9.9zAKlpqc4XJOVrES5FSv7-Ul4uYSACufyFSkC7jn950&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Urmila&quot;,
+        &quot;last_name&quot;: &quot;Saini&quot;,
+        &quot;mobile_number&quot;: &quot;7092571443&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7048822098&quot;,
+        &quot;email_id&quot;: &quot;chakradhar.gandhi@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;kamla.chopra@yahoo.co.in&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;096&quot;,
+        &quot;apartment_name&quot;: &quot;Iyer Lodge&quot;,
+        &quot;street_name&quot;: &quot;Achari Locks&quot;,
+        &quot;landmark&quot;: &quot;Anang Port&quot;,
+        &quot;area&quot;: &quot;Bhavani Ville&quot;,
+        &quot;pincode&quot;: &quot;90849&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Himachal Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-07-29T17:58:05.584902923Z&quot;,
+        &quot;serial_number&quot;: &quot;175526326518754&quot;,
+        &quot;imei1&quot;: &quot;175526326518754&quot;,
+        &quot;imei2&quot;: &quot;175526326518754&quot;,
+        &quot;popurl&quot;: &quot;www.satish-mahajan.net&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 20,
+            &quot;remark&quot;: &quot;Ut et corporis quia sequi optio sunt.&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;remark&quot;: &quot;Nesciunt consectetur esse in fuga recusandae et non ipsam.&quot;
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Ut ad est harum quia veniam.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
