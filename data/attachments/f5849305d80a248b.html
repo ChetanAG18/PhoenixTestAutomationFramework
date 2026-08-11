@@ -1,0 +1,98 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Amritambu&quot;,
+        &quot;last_name&quot;: &quot;Patel&quot;,
+        &quot;mobile_number&quot;: &quot;7081263978&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7030056390&quot;,
+        &quot;email_id&quot;: &quot;vinay.bandopadhyay@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;chandramani.jain@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;456&quot;,
+        &quot;apartment_name&quot;: &quot;Dhananjay Trace&quot;,
+        &quot;street_name&quot;: &quot;Chandi River&quot;,
+        &quot;landmark&quot;: &quot;Pandey Canyon&quot;,
+        &quot;area&quot;: &quot;Som Mission&quot;,
+        &quot;pincode&quot;: &quot;59221&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Orissa&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-08-01T18:25:24.812841138Z&quot;,
+        &quot;serial_number&quot;: &quot;697769732781444&quot;,
+        &quot;imei1&quot;: &quot;697769732781444&quot;,
+        &quot;imei2&quot;: &quot;697769732781444&quot;,
+        &quot;popurl&quot;: &quot;www.giri-chaturvedi.name&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 28,
+            &quot;remark&quot;: &quot;Iusto iste libero amet perferendis placeat.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODY0NzI3MTh9.wUfVVtVazlbgJ0bwikMZVd--6HjCZi9JwHWtOmGN-AI</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3ODY0NzI3MTh9.wUfVVtVazlbgJ0bwikMZVd--6HjCZi9JwHWtOmGN-AI&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Amritambu&quot;,
+        &quot;last_name&quot;: &quot;Patel&quot;,
+        &quot;mobile_number&quot;: &quot;7081263978&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7030056390&quot;,
+        &quot;email_id&quot;: &quot;vinay.bandopadhyay@gmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;chandramani.jain@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;456&quot;,
+        &quot;apartment_name&quot;: &quot;Dhananjay Trace&quot;,
+        &quot;street_name&quot;: &quot;Chandi River&quot;,
+        &quot;landmark&quot;: &quot;Pandey Canyon&quot;,
+        &quot;area&quot;: &quot;Som Mission&quot;,
+        &quot;pincode&quot;: &quot;59221&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Orissa&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-08-01T18:25:24.812841138Z&quot;,
+        &quot;serial_number&quot;: &quot;697769732781444&quot;,
+        &quot;imei1&quot;: &quot;697769732781444&quot;,
+        &quot;imei2&quot;: &quot;697769732781444&quot;,
+        &quot;popurl&quot;: &quot;www.giri-chaturvedi.name&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 28,
+            &quot;remark&quot;: &quot;Iusto iste libero amet perferendis placeat.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
