@@ -1,0 +1,114 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Surya&quot;,
+        &quot;last_name&quot;: &quot;Jha&quot;,
+        &quot;mobile_number&quot;: &quot;7049395006&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7050326593&quot;,
+        &quot;email_id&quot;: &quot;manik.guneta@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;giriraaj.pillai@gmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;856&quot;,
+        &quot;apartment_name&quot;: &quot;Dayaananda Crossroad&quot;,
+        &quot;street_name&quot;: &quot;Somnath Crescent&quot;,
+        &quot;landmark&quot;: &quot;Ambar Brook&quot;,
+        &quot;area&quot;: &quot;Chiranjeeve Avenue&quot;,
+        &quot;pincode&quot;: &quot;43792&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Bihar&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-11-07T23:55:18.712938854Z&quot;,
+        &quot;serial_number&quot;: &quot;045905657802821&quot;,
+        &quot;imei1&quot;: &quot;045905657802821&quot;,
+        &quot;imei2&quot;: &quot;045905657802821&quot;,
+        &quot;popurl&quot;: &quot;www.sharda-guha.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Et eum ducimus laudantium velit reiciendis perspiciatis sit.&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;remark&quot;: &quot;Ipsa sint sed tenetur inventore facere.&quot;
+        },
+        {
+            &quot;id&quot;: 29,
+            &quot;remark&quot;: &quot;Consectetur accusantium modi neque accusantium commodi quidem.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3OTQ5NTk3MTJ9.AtRxx-L3ZjxvLch7Gry9CyhVI4DuRJl41VSuHWKeSvI</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3OTQ5NTk3MTJ9.AtRxx-L3ZjxvLch7Gry9CyhVI4DuRJl41VSuHWKeSvI&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Surya&quot;,
+        &quot;last_name&quot;: &quot;Jha&quot;,
+        &quot;mobile_number&quot;: &quot;7049395006&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7050326593&quot;,
+        &quot;email_id&quot;: &quot;manik.guneta@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;giriraaj.pillai@gmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;856&quot;,
+        &quot;apartment_name&quot;: &quot;Dayaananda Crossroad&quot;,
+        &quot;street_name&quot;: &quot;Somnath Crescent&quot;,
+        &quot;landmark&quot;: &quot;Ambar Brook&quot;,
+        &quot;area&quot;: &quot;Chiranjeeve Avenue&quot;,
+        &quot;pincode&quot;: &quot;43792&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Bihar&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-11-07T23:55:18.712938854Z&quot;,
+        &quot;serial_number&quot;: &quot;045905657802821&quot;,
+        &quot;imei1&quot;: &quot;045905657802821&quot;,
+        &quot;imei2&quot;: &quot;045905657802821&quot;,
+        &quot;popurl&quot;: &quot;www.sharda-guha.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 24,
+            &quot;remark&quot;: &quot;Et eum ducimus laudantium velit reiciendis perspiciatis sit.&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;remark&quot;: &quot;Ipsa sint sed tenetur inventore facere.&quot;
+        },
+        {
+            &quot;id&quot;: 29,
+            &quot;remark&quot;: &quot;Consectetur accusantium modi neque accusantium commodi quidem.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
