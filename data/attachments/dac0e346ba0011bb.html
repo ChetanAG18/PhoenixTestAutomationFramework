@@ -1,0 +1,106 @@
+<div>POST to http://64.227.160.186:9000/v1/job/create</div>
+
+    <h4>Body</h4>
+    <div>
+    <pre class="preformated-text">
+{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Dwaipayana&quot;,
+        &quot;last_name&quot;: &quot;Kapoor&quot;,
+        &quot;mobile_number&quot;: &quot;7007325323&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7013451558&quot;,
+        &quot;email_id&quot;: &quot;saraswati.pothuvaal@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;bahula.nambeesan@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;220&quot;,
+        &quot;apartment_name&quot;: &quot;Bhargava Locks&quot;,
+        &quot;street_name&quot;: &quot;Dhanapati Locks&quot;,
+        &quot;landmark&quot;: &quot;Vidur Estates&quot;,
+        &quot;area&quot;: &quot;Malik Skyway&quot;,
+        &quot;pincode&quot;: &quot;63464&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Arunachal Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-11-16T01:55:24.625177193Z&quot;,
+        &quot;serial_number&quot;: &quot;364017491816929&quot;,
+        &quot;imei1&quot;: &quot;364017491816929&quot;,
+        &quot;imei2&quot;: &quot;364017491816929&quot;,
+        &quot;popurl&quot;: &quot;www.dharani-gandhi.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 22,
+            &quot;remark&quot;: &quot;Magni aut fugiat possimus repellendus id et non.&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;remark&quot;: &quot;Quia saepe repellendus ab repellendus repellendus ea maxime accusamus ea.&quot;
+        }
+    ]
+}    </pre>
+    </div>
+
+    <h4>Headers</h4>
+    <div>
+            <div>Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3OTU2NTgxMTl9.nT9dunnQAGtQeGxK_ig5-55JNSJHT692mO23kOTPOME</div>
+            <div>Accept: application/json, application/javascript, text/javascript, text/json</div>
+            <div>Content-Type: application/json</div>
+    </div>
+
+
+
+    <h4>Curl</h4>
+    <div>
+        curl -v -X POST &#39;http://64.227.160.186:9000/v1/job/create&#39; -H &#39;Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6ImZkIiwibGFzdF9uYW1lIjoiZmQiLCJsb2dpbl9pZCI6ImlhbWZkIiwibW9iaWxlX251bWJlciI6Ijg4OTk3NzY2NTUiLCJlbWFpbF9pZCI6Im1hcmtAZ21haWwuY29tIiwicGFzc3dvcmQiOiI1ZjRkY2MzYjVhYTc2NWQ2MWQ4MzI3ZGViODgyY2Y5OSIsInJlc2V0X3Bhc3N3b3JkX2RhdGUiOm51bGwsImxvY2tfc3RhdHVzIjowLCJpc19hY3RpdmUiOjEsIm1zdF9yb2xlX2lkIjo1LCJtc3Rfc2VydmljZV9sb2NhdGlvbl9pZCI6MSwiY3JlYXRlZF9hdCI6IjIwMjEtMTEtMDNUMDg6MDY6MjMuMDAwWiIsIm1vZGlmaWVkX2F0IjoiMjAyMS0xMS0wM1QwODowNjoyMy4wMDBaIiwicm9sZV9uYW1lIjoiRnJvbnREZXNrIiwic2VydmljZV9sb2NhdGlvbiI6IlNlcnZpY2UgQ2VudGVyIEEiLCJpYXQiOjE3OTU2NTgxMTl9.nT9dunnQAGtQeGxK_ig5-55JNSJHT692mO23kOTPOME&#39; -H &#39;Accept: application/json, application/javascript, text/javascript, text/json&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;mst_service_location_id&quot;: 0,
+    &quot;mst_platform_id&quot;: 2,
+    &quot;mst_warrenty_status_id&quot;: 1,
+    &quot;mst_oem_id&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;first_name&quot;: &quot;Dwaipayana&quot;,
+        &quot;last_name&quot;: &quot;Kapoor&quot;,
+        &quot;mobile_number&quot;: &quot;7007325323&quot;,
+        &quot;mobile_number_alt&quot;: &quot;7013451558&quot;,
+        &quot;email_id&quot;: &quot;saraswati.pothuvaal@hotmail.com&quot;,
+        &quot;email_id_alt&quot;: &quot;bahula.nambeesan@hotmail.com&quot;
+    },
+    &quot;customer_address&quot;: {
+        &quot;flat_number&quot;: &quot;220&quot;,
+        &quot;apartment_name&quot;: &quot;Bhargava Locks&quot;,
+        &quot;street_name&quot;: &quot;Dhanapati Locks&quot;,
+        &quot;landmark&quot;: &quot;Vidur Estates&quot;,
+        &quot;area&quot;: &quot;Malik Skyway&quot;,
+        &quot;pincode&quot;: &quot;63464&quot;,
+        &quot;country&quot;: &quot;India&quot;,
+        &quot;state&quot;: &quot;Arunachal Pradesh&quot;
+    },
+    &quot;customer_product&quot;: {
+        &quot;dop&quot;: &quot;2026-11-16T01:55:24.625177193Z&quot;,
+        &quot;serial_number&quot;: &quot;364017491816929&quot;,
+        &quot;imei1&quot;: &quot;364017491816929&quot;,
+        &quot;imei2&quot;: &quot;364017491816929&quot;,
+        &quot;popurl&quot;: &quot;www.dharani-gandhi.in&quot;,
+        &quot;product_id&quot;: 1,
+        &quot;mst_model_id&quot;: 1
+    },
+    &quot;problems&quot;: [
+        {
+            &quot;id&quot;: 22,
+            &quot;remark&quot;: &quot;Magni aut fugiat possimus repellendus id et non.&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;remark&quot;: &quot;Quia saepe repellendus ab repellendus repellendus ea maxime accusamus ea.&quot;
+        }
+    ]
+}&#39;
+    </div>
+
